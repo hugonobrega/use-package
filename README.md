@@ -339,6 +339,13 @@ equivalent:
   (add-hook 'text-mode-hook #'ace-jump-mode))
 ```
 
+Note that the use of `:hook` with only the name of the hook to add to, as in the example
+```elisp
+(use-package ace-jump-mode
+  :hook prog-mode)
+```
+above, is limited to situations where the package name concides with its own major or minor mode.
+
 When using `:hook` omit the "-hook" suffix if you specify the hook
 explicitly, as this is appended by default. For example the following
 code will not work as it attempts to add to the `prog-mode-hook-hook`
